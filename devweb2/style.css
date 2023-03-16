@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    text-align: center;
+    border: 1px goldenrod solid;
+    margin: 1em 13em;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+input {
+    color: black;
+    background-color: goldenrod;
+}
+
+p {
+    background-color: goldenrod;
+    width: 250px;
+    margin: auto;
+}
