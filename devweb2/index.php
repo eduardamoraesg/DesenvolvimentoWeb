@@ -11,9 +11,11 @@
     <h1>Página inicial</h1>
     <p>Preencha as informações abaixo:</p>
     <form action="processa.php" method="POST">
-    <label for="nome"></label>
+    <label for="nome">Nome:</label>
     <input type="text" placeholder = "Digite seu nome" name="nome" id="nome"> <br>
-    <input type="email" placeholder = "Digite seu email" name="email" id="email"> <br>
+    <label for="e-mail">E-mail:</label>
+    <input type="e-mail" placeholder = "Digite seu e-mail" name="email" id="e-mail"> <br>
+    <label for="senha">Senha:</label>
     <input type="password" placeholder = "Digite sua senha" name="senha" id="senha"> <br>
     <input type="submit" value="Enviar">
 </body>
