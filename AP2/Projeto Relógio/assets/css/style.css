@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* sem espaçamento inicial */
+    font-family: 'Open Sans', sans-serif;
+    /* 'Open Sans' é a primeira opção de fonte, mas caso não seja suportada pelo navegador, sans-serif será a segunda opção */
+}
+
+body {
+    height: 100vh;
+    /* 100vh para cubrir a altura da tela inteira */
+    background: linear-gradient(120deg, #ed347b, #000000d8);
+    display: flex;
+    /* display flex para alinhar os elementos no centro */
+    align-items: center;
+    /* também para centralizar */
+    justify-content: center;
+    /* centraliza horizontalmente os elementos */
+}
+
+.relogio {
+    /* o . é usado para identificar o seletor, onde ".relogio" será a caixa que engloba a caixa dos números */
+    display: flex;
+    /* para deixar os elementos um ao lado do outro/centralizados */
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    border-radius: 3px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
+}
+
+.relogio div {
+    /* para customizar caixas do horário */
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column serve para colocar um elemento abaixo do outro */
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(5, 5, 5, .7);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+    border-radius: 7px;
+    /* para arredondar */
+    letter-spacing: 3px;
+    /* letter spacing é o espaço entre as letras */
+}
+
+.relogio span {
+    /* vai pegar todos os spans */
+    font-weight: bolder;
+    /* bolder "destaca" a fonte */
+    font-size: 60px;
+}
+
+.relogio span.tempo {
+    font-size: 12px;
+}
