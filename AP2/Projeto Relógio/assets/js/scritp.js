@@ -10,6 +10,7 @@ const relogio = setInterval(function time() {
     let sec = dateToday.getSeconds();
     // "dateToday." atribui o tempo exato às variáveis
     // function time() atualiza o horário
+    // let é usado para criar uma variável que pode ter o seu valor alterado ao longo do código
 
     if (hr < 10) hr = '0' + hr;
     if (min < 10) min = '0' + min;
