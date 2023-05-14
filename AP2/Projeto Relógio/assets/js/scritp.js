@@ -1,7 +1,7 @@
 const horas = document.getElementById('horas');
 const minutos = document.getElementById('minutos');
 const segundos = document.getElementById('segundos');
-// pega o elemento pelo 'id' dele. que no caso é horas
+// pega o elemento pelo 'id'. que no caso é horas
 
 const relogio = setInterval(function time() {
     let dateToday = new Date();
