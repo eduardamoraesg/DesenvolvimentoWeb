@@ -9,6 +9,7 @@ const relogio = setInterval(function time() {
     let min = dateToday.getMinutes();
     let sec = dateToday.getSeconds();
     // "dateToday." atribui o tempo exato às variáveis
+    // function time() atualiza o horário
 
     if (hr < 10) hr = '0' + hr;
     if (min < 10) min = '0' + min;
