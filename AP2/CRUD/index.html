@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #666;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .remove-button {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .remove-button:hover {
+            background-color: #d32f2f;
+        }
+</style>
+<body>
+    <h1>CRUD em JavaScript</h1>
+
+    <h2>Adicionar Usuário</h2>
+    <input type="text" id="inputNome" placeholder="Nome">
+    <input type="text" id="inputEmail" placeholder="Email">
+    <button onclick="adicionarUsuario()">Adicionar</button>
+
+    <h2>Lista de Usuários</h2>
+    <ul id="listaUsuarios"></ul>
+
+    <script>
+        var usuarios = [];
+
+        function adicionarUsuario() {
+            var nome = document.getElementById('inputNome').value;
+            var email = document.getElementById('inputEmail').value;
+
+            var usuario = {
+                nome: nome,
+                email: email
+            };
+
+            usuarios.push(usuario);
+
+            atualizarListaUsuarios();
+            limparCampos();
+        }
+
+        function removerUsuario(index) {
+            usuarios.splice(index, 1);
+
+            atualizarListaUsuarios();
+        }
+
+        function atualizarListaUsuarios() {
+            var listaUsuarios = document.getElementById('listaUsuarios');
+            listaUsuarios.innerHTML = '';
+
+            usuarios.forEach(function(usuario, index) {
+                var item = document.createElement('li');
+                item.textContent = usuario.nome + ' (' + usuario.email + ')';
+                var removerButton = document.createElement('button');
+                removerButton.textContent = 'Remover';
+                removerButton.onclick = function() {
+                    removerUsuario(index);
+                };
+                item.appendChild(removerButton);
+
+                listaUsuarios.appendChild(item);
+            });
+        }
+
+        function limparCampos() {
+            document.getElementById('inputNome').value = '';
+            document.getElementById('inputEmail').value = '';
+        }
+    </script>
+</body>
+</html>
